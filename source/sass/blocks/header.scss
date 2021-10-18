@@ -1,0 +1,121 @@
+.header {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 22px;
+  width: 874px;
+
+  @media (max-width: $tablet-width) {
+    background-color: #ffffff;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.header--no-js {
+  @media (max-width: $tablet-width) {
+    position: static;
+    transform: none;
+  }
+}
+
+.header__nav {
+  margin: 0 auto;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 7px;
+
+  @media (max-width: $tablet-width) {
+    border: none;
+    display: none;
+  }
+}
+
+.header--no-js .header__nav--show {
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.header__nav--show {
+  display: block;
+}
+
+.header__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0 22px 0 20px;
+  padding: 0;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    text-align: left;
+    margin: 100px 0 0 0;
+  }
+}
+
+.header__item {
+  @media (max-width: $tablet-width) {
+    background: #f6f6f6;
+    height: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.header__item a {
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.7;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+
+  @media (max-width: $tablet-width) {
+    color: #48494d;
+    padding-left: 16px;
+  }
+}
+
+.header__item a:hover {
+  opacity: 1;
+}
+
+.header__item::before {
+  @media (max-width: $tablet-width) {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 12px;
+    background: url("../img/icon/Shape.svg") no-repeat;
+    right: 25px;
+  }
+}
+
+.header__btn {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    position: absolute;
+    background: #0ad9c6 url("../img/icon/burger.svg") no-repeat;
+    width: 50px;
+    height: 50px;
+    right: 0;
+    background-position: center;
+    border: none;
+    padding: 0;
+  }
+}
+
+.header--no-js .header__btn {
+  display: none;
+}
+
+.header__btn--close {
+  background: url("../img/icon/close.svg") no-repeat;
+  background-position: center;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bicycle</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header header--no-js">
+    <button class="header__btn header__btn--close header__btn--no-js">
+    </button>
+    <nav class="header__nav header__nav--show">
+      <ul class="header__list">
+        <li class="header__item">
+          <a href="#facts">О нас</a>
+        </li>
+        <li class="header__item">
+          <a href="#types">Виды велосипедов</a>
+        </li>
+        <li class="header__item">
+          <a href="#video">Видео про велосипеды</a>
+        </li>
+        <li class="header__item">
+          <a href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Продажа велосипедов</h1>
+    <section class="promo">
+      <div class="promo__wrapper">
+        <a href="">
+          <img src="./img/logo.svg">
+        </a>
+        <h2>Мы продаем велосипеды</h2>
+        <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </div>
+      <form class="promo__form" action="https://echo.htmlacademy.ru" method="GET">
+        <h3>Заполните поля ниже и мы подберем велосипед Вашей мечты</h3>
+        <input class="promo__input promo__input--name" type="text" name="name" id="name" placeholder="Введите Ваше Имя" required>
+        <label for="name"></label>
+        <input class="promo__input promo__input-tel" type="number" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
+        <label for="tel"></label>
+        <button class="promo__submit" type="submit">Подобрать велосипед мечты</button>
+      </form>
+    </section>
+    <section class="facts" id="facts">
+      <h2>Несколько фактов о нас</h2>
+      <ul class="facts__list">
+        <li class="facts__item">
+          <p>01</p>
+          <p>Самый широкий выбор велосипедов!</p>
+        </li>
+        <li class="facts__item">
+          <p>02</p>
+          <p>Доставка велосипедов по всей России!</p>
+        </li>
+        <li class="facts__item">
+          <p>03</p>
+          <p>Большой выбор крутых аксессуаров!</p>
+        </li>
+        <li class="facts__item">
+          <p>04</p>
+          <p>Профессиональные консультации!</p>
+        </li>
+      </ul>
+    </section>
+    <section class="types" id="types">
+      <h2>Виды велосипедов</h2>
+      <ul class="types__list">
+        <li class="types__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/doroga-tablet.webp 1x, img/doroga-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/doroga.webp 1x, img/doroga@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/doroga-tablet.jpg 1x, img/doroga-tablet@2x.jpg 2x">
+            <img src="./img/doroga.jpg" srcset="img/doroga@2x.jpg" width="342" height="503" alt="Дорожный велосипед">
+          </picture>
+          <p>Дорожный велосипед</p>
+        </li>
+        <li class="types__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/gora-tablet.webp 1x, img/gora-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/gora.webp 1x, img/gora@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/gora-tablet.jpg 1x, img/gora-tablet@2x.jpg 2x">
+            <img src="./img/gora.jpg" srcset="img/gora@2x.jpg" width="342" height="566" alt="Горный велосипед">
+          </picture>
+          <p>Горный велосипед</p>
+        </li>
+        <li class="types__item">
+          <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/child-tablet.webp 1x, img/child-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="./img/child.webp 1x, img/child@2x.webp 2x">
+            <source media="(max-width: 1023px)" srcset="img/child-tablet.jpg 1x, img/child-tablet@2x.jpg 2x">
+            <img src="./img/child.jpg" srcset="img/child@2x.jpg" width="342" height="513" alt="Детский велосипед">
+          </picture>
+          <p>Детский велосипед</p>
+        </li>
+      </ul>
+    </section>
+    <section class="video" id="video">
+      <h2>Видео про велосипеды</h2>
+      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+      <div class="video__wrapper">
+        <picture>
+          <source type="image/webp" media="(max-width: 767px)" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="./img/video.webp 1x, img/video@2x.webp 2x">
+          <source media="(max-width: 767px)" srcset="img/video-mobile.jpg 1x, img/video-mobile@2x.jpg 2x">
+          <source media="(max-width: 1023px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img src="./img/video.jpg" srcset="img/video@2x.jpg" width="929" height="522" alt="Видео о велосипедах">
+        </picture>
+        <a class="video__btn" href="#">
+          <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.600098 0.399902L13.6001 9.4999L0.600098 18.5999V0.399902Z" fill="#070707" />
+          </svg>
+        </a>
+      </div>
+    </section>
+    <section class="search">
+      <h2>Как нас найти?</h2>
+      <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1634295080289!5m2!1sru!2sua" width="957" height="530" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+  </main>
+  <footer class="footer" id="contacts">
+    <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+    <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+  </footer>
+  <script src="./js/script.min.js"></script>
+</body>
+
+</html>
