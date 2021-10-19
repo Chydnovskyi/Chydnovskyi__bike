@@ -24,6 +24,11 @@
   letter-spacing: -0.08px;
   color: $opacity-black;
   margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 41px;
+  }
 }
 
 .types__list {
@@ -37,6 +42,7 @@
 
   @media (max-width: $tablet-width) {
     max-width: 590px;
+    margin-top: 31px;
   }
 
   @media (max-width: $mobile-width) {
@@ -53,7 +59,7 @@
   }
 }
 
-.types__item:first-child {
+.types__item--first {
   margin-top: 10px;
 
   @media (max-width: $tablet-width) {
@@ -61,7 +67,7 @@
   }
 }
 
-.types__item:nth-child(2) {
+.types__item--second {
   margin-top: 39px;
 
   @media (max-width: $tablet-width) {
@@ -73,10 +79,31 @@
   @media (max-width: $tablet-width) {
     margin-right: 0;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 41px;
+  }
 }
 
-.types__item:last-child {
+.types__item--third {
   margin-right: 0;
+}
+
+.types__item:nth-child(2n+3) {
+  @media (max-width: $tablet-width) {
+    margin-top: 51px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 43px;
+  }
+}
+
+.types__item:nth-child(2n+4) {
+  @media (max-width: $tablet-width) {
+    margin-top: 51px;
+    margin-left: 50px;
+  }
 }
 
 .types__item p {
@@ -87,9 +114,13 @@
   color: $black;
   margin: 0;
   padding-top: 15px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 17px;
+  }
 }
 
-.types__item:first-child::before {
+.types__item--first::before {
   content: "";
   position: absolute;
   width: 180px;
@@ -103,11 +134,17 @@
     width: 127px;
     height: 127px;
     background-size: contain;
-    top: 204px;
+    top: 202px;
+    left: -37px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 201px;
+    left: -26px;
   }
 }
 
-.types__item:nth-child(2)::before {
+.types__item--second::before {
   content: "";
   position: absolute;
   width: 47px;
@@ -121,7 +158,7 @@
   }
 }
 
-.types__item:nth-child(2)::after {
+.types__item--second::after {
   content: "";
   position: absolute;
   width: 47px;
@@ -135,7 +172,7 @@
   }
 }
 
-.types__item:nth-child(3)::before {
+.types__item--third::before {
   content: "";
   position: absolute;
   width: 95px;
@@ -148,10 +185,12 @@
     background-size: contain;
     width: 68px;
     height: 68px;
+    top: -20px;
+    right: -25px;
   }
 
   @media (max-width: $mobile-width) {
-    top: -19px;
+    top: -21px;
     right: -15px;
   }
 }

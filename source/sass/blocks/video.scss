@@ -2,7 +2,7 @@
   background: #131314;
   position: relative;
   min-height: 706px;
-  padding-top: 122px;
+  padding-top: 124px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
@@ -12,7 +12,7 @@
 
   @media (max-width: $mobile-width) {
     min-height: 384px;
-    padding-top: 84px;
+    padding-top: 85px;
   }
 }
 
@@ -21,6 +21,14 @@
   bottom: -104px;
   left: 50%;
   transform: translate(-50%, 0);
+
+  @media (max-width: $tablet-width) {
+    bottom: -89px;
+  }
+
+  @media (max-width: $mobile-width) {
+    bottom: -55px;
+  }
 }
 
 .video h2 {
@@ -58,6 +66,7 @@
 
   @media (max-width: $mobile-width) {
     width: auto;
+    padding: 20px 5px 0;
   }
 }
 
@@ -73,6 +82,18 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -54%);
+
+  @media (max-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+    transform: translate(-50%, -53%);
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 65px;
+    height: 65px;
+    transform: translate(-50%, -55%);
+  }
 }
 
 .video__btn:hover {
@@ -95,4 +116,14 @@
 .video__btn svg {
   position: absolute;
   left: 44%;
+
+  @media (max-width: $tablet-width) {
+    width: 19px;
+    height: 26px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 14px;
+    height: 19px;
+  }
 }

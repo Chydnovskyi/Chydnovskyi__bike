@@ -30,6 +30,7 @@ form.addEventListener('click', function(evt) {
   if (!validatePhone(input)){
     evt.preventDefault();
     input.style.border = '3px solid #ee0909';
+    alert('Введите корректный телефон');
   }else{
     input.style.border = '1px solid #0ad9c6';
   }

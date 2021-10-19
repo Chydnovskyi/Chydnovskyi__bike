@@ -12,6 +12,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/16x16.png">
+  <link rel="icon" href="favicon/32.svg" type="image/svg+xml">
   <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
   <link rel="mask-icon" href="favicon/safari-tablet.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#2b5797">
@@ -53,55 +54,62 @@
       </div>
       <form class="promo__form" action="https://echo.htmlacademy.ru" method="GET">
         <h3>Заполните поля ниже и мы подберем велосипед Вашей мечты</h3>
+        <div class="promo__input promo__input--first">
         <input type="text" name="name" id="name" placeholder="Введите Ваше Имя" required>
         <label for="name"></label>
+        </div>
+        <div class="promo__input promo__input--second">
         <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
         <label for="tel"></label>
+        </div>
         <button class="promo__submit" type="submit">Подобрать велосипед мечты</button>
       </form>
     </section>
     <section class="facts" id="facts">
       <h2>Несколько фактов о нас</h2>
       <ul class="facts__list">
-        <li class="facts__item">
-          <p>01</p>
-          <p>Самый широкий выбор велосипедов!</p>
+        <li class="facts__item facts__item--first">
+          <p class="facts__paragraph facts__paragraph--first">01</p>
+          <p class="facts__paragraph facts__paragraph--second">Самый широкий выбор велосипедов!</p>
         </li>
         <li class="facts__item">
-          <p>02</p>
-          <p>Доставка велосипедов по всей России!</p>
+          <p class="facts__paragraph facts__paragraph--first">02</p>
+          <p class="facts__paragraph facts__paragraph--second">Доставка велосипедов по всей России!</p>
         </li>
         <li class="facts__item">
-          <p>03</p>
-          <p>Большой выбор крутых аксессуаров!</p>
+          <p class="facts__paragraph facts__paragraph--first">03</p>
+          <p class="facts__paragraph facts__paragraph--second">Большой выбор крутых аксессуаров!</p>
         </li>
-        <li class="facts__item">
-          <p>04</p>
-          <p>Профессиональные консультации!</p>
+        <li class="facts__item facts__item--last">
+          <p class="facts__paragraph facts__paragraph--first">04</p>
+          <p class="facts__paragraph facts__paragraph--second">Профессиональные консультации!</p>
         </li>
       </ul>
     </section>
     <section class="types" id="types">
       <h2>Виды велосипедов</h2>
       <ul class="types__list">
-        <li class="types__item">
+        <li class="types__item types__item--first">
           <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/doroga-tablet.webp 1x, img/doroga-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/doroga.webp 1x, img/doroga@2x.webp 2x">
               <!--width 1х: 503px; 2x: 1006px -->
             <img src="./img/doroga.jpg" srcset="img/doroga@2x.jpg" width="342" height="503" alt="Дорожный велосипед" data-object-fit="cover">
           </picture>
           <p>Дорожный велосипед</p>
         </li>
-        <li class="types__item">
+        <li class="types__item types__item--second">
           <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/gora-tablet.webp 1x, img/gora-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/gora.webp 1x, img/gora@2x.webp 2x">
             <!--width 1х: 566px; 2x: 1132px -->
             <img src="./img/gora.jpg" srcset="img/gora@2x.jpg" width="342" height="566" alt="Горный велосипед" data-object-fit="cover">
           </picture>
           <p>Горный велосипед</p>
         </li>
-        <li class="types__item">
+        <li class="types__item types__item--third">
           <picture>
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/child-tablet.webp 1x, img/child-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/child.webp 1x, img/child@2x.webp 2x">
             <!--width 1х: 513px; 2x: 1026px -->
             <img src="./img/child.jpg" srcset="img/child@2x.jpg" width="342" height="513" alt="Детский велосипед" data-object-fit="cover">
@@ -121,8 +129,8 @@
         </picture>
         <button class="video__btn" type="button">
           <span class="visually-hidden">Воспроизвести</span>
-          <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.600098 0.399902L13.6001 9.4999L0.600098 18.5999V0.399902Z" fill="#070707" />
+          <svg width="14" height="19">
+            <use xlink:href="img/sprite.svg#videoBtn"></use>
           </svg>
         </button>
       </div>
@@ -130,7 +138,9 @@
     <section class="search">
       <h2>Как нас найти?</h2>
       <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      <div class="search__map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1634295080289!5m2!1sru!2sua" width="957" height="530" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
     </section>
   </main>
   <footer class="footer" id="contacts">
