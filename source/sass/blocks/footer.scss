@@ -1,8 +1,8 @@
 .footer {
-  padding: 36px 0 96px;
+  padding: 36px 0 96px 25px;
   margin: 0 auto;
   display: flex;
-  max-width: 517px;
+  justify-content: center;
 
   @media (max-width: $mobile-width) {
     flex-wrap: wrap;
@@ -20,8 +20,7 @@
   position: relative;
 }
 
-.footer a:first-child {
-  margin-left: 18px;
+.footer__mail {
   margin-right: 127px;
 
   @media (max-width: $mobile-width) {
@@ -30,7 +29,7 @@
   }
 }
 
-.footer a:first-child:before {
+.footer__mail::before {
   content: "";
   position: absolute;
   width: 26px;
@@ -40,16 +39,16 @@
   left: -42px;
 }
 
-.footer a:last-child:before {
+.footer__tel::before {
   content: "";
   position: absolute;
   width: 22px;
   height: 23px;
   background: url("../img/phone.svg") no-repeat;
   top: -3px;
-  left: -26px;
+  left: -35px;
 }
 
 .footer a:hover {
-  color: #0AD9C6;
+  color: $basic;
 }

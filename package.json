@@ -44,5 +44,10 @@
   ],
   "engines": {
     "node": "^12 || ^14"
+  },
+  "dependencies": {
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-svgstore": "^8.0.0"
   }
 }

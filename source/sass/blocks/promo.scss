@@ -26,6 +26,7 @@
   height: 267px;
   margin-right: 160px;
   text-align: left;
+  position: relative;
 
   @media (max-width: $tablet-width) {
     background: url("../img/promo-tablet.jpg") no-repeat;
@@ -68,9 +69,8 @@
   font-size: 46px;
   line-height: 64px;
   letter-spacing: -0.08px;
-  color: #ffffff;
-  margin-top: 29px;
-  margin-bottom: 23px;
+  color: $white;
+  margin: 25px 0;
 
   @media (max-width: $tablet-width) {
     font-size: 30px;
@@ -82,8 +82,8 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
-  letter-spacing: -0.01em;
-  color: #ffffff;
+  letter-spacing: -0.08px;
+  color: $white;
   opacity: 0.8;
   margin: 0;
 
@@ -98,7 +98,7 @@
   line-height: 28px;
   text-align: center;
   letter-spacing: -0.01em;
-  color: #ffffff;
+  color: $white;
   margin: 0;
 }
 
@@ -109,7 +109,8 @@
   margin-top: 5px;
 
   @media (max-width: $tablet-width) {
-    margin-top: 70px;
+    padding-top: 70px;
+    margin: 0 auto;
     width: 321px;
   }
 
@@ -123,29 +124,34 @@
   font-size: 17px;
   line-height: 28px;
   letter-spacing: -0.08px;
-  color: #ffffff;
+  color: $white;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
-    color: #000000;
+    color: $black;
   }
 }
 
-.promo__input {
+.promo__form input {
   min-height: 48px;
-  padding: 13px 0 10px 29px;
+  padding: 16px 0 10px 28px;
   box-sizing: border-box;
   border: 1px solid #c9ccd4;
   border-radius: 6px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
-.promo__input--name {
-  margin-top: 20px;
+.promo__form input:nth-child(2) {
+  margin-top: 19px;
 }
 
-.promo__input::placeholder {
-  font-weight: normal;
+.promo__form input:nth-child(4) {
+  margin-bottom: 21px;
+}
+
+.promo__form input::placeholder {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   color: #1c1c1c;
@@ -153,24 +159,18 @@
 }
 
 .promo__submit {
+  font-family: "Open Sans", sans-serif;
   min-height: 51px;
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
-  color: #000000;
-  background: #0ad9c6;
+  color: $black;
+  background: $basic;
   border-radius: 6px;
   border: none;
 }
 
 .promo__submit:hover {
-  background: #56ddd0;
+  background: $basic-hover;
 }
 
-.promo__input--valid {
-  border: 1px solid #0AD9C6;
-}
-
-.promo__input--notvalid {
-  border: 3px solid #ee0909;
-}

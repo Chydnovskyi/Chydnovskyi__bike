@@ -20,7 +20,7 @@
   font-size: 30px;
   line-height: 30px;
   letter-spacing: -0.08px;
-  color: #1f1f1f;
+  color: $opacity-black;
   margin: 0;
 
   @media (max-width: $tablet-width) {
@@ -69,7 +69,7 @@
   font-size: 28px;
   line-height: 38px;
   letter-spacing: -1.27px;
-  color: #0ad9c6;
+  color: $basic;
   margin: 0;
 }
 
@@ -78,8 +78,8 @@
   font-size: 22px;
   line-height: 34px;
   letter-spacing: -0.5px;
-  color: #000000;
-  margin: 18px 0 0;
+  color: $black;
+  margin: 14px 0 0;
 
   @media (max-width: $mobile-width) {
     font-size: 18px;

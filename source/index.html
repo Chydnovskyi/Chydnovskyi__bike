@@ -3,10 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Bicycle</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="Description" content="Велосипеды">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bicycle</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/16x16.png">
+  <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
+  <link rel="mask-icon" href="favicon/safari-tablet.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2b5797">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preload" href="fonts/opensans-light.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,16 +27,16 @@
     <nav class="header__nav header__nav--show">
       <ul class="header__list">
         <li class="header__item">
-          <a href="#facts">О нас</a>
+          <a href="#facts" class="scroll">О нас</a>
         </li>
         <li class="header__item">
-          <a href="#types">Виды велосипедов</a>
+          <a href="#types" class="scroll">Виды велосипедов</a>
         </li>
         <li class="header__item">
-          <a href="#video">Видео про велосипеды</a>
+          <a href="#video" class="scroll">Видео про велосипеды</a>
         </li>
         <li class="header__item">
-          <a href="#contacts">Контакты</a>
+          <a href="#contacts" class="scroll">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -35,16 +46,16 @@
     <section class="promo">
       <div class="promo__wrapper">
         <a href="">
-          <img src="./img/logo.svg">
+          <img src="./img/logo.svg" alt="Логотип Moon">
         </a>
         <h2>Мы продаем велосипеды</h2>
         <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
       </div>
       <form class="promo__form" action="https://echo.htmlacademy.ru" method="GET">
         <h3>Заполните поля ниже и мы подберем велосипед Вашей мечты</h3>
-        <input class="promo__input promo__input--name" type="text" name="name" id="name" placeholder="Введите Ваше Имя" required>
+        <input type="text" name="name" id="name" placeholder="Введите Ваше Имя" required>
         <label for="name"></label>
-        <input class="promo__input promo__input-tel" type="number" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
+        <input type="tel" name="tel" id="tel" placeholder="Введите Ваш номер телефона" required>
         <label for="tel"></label>
         <button class="promo__submit" type="submit">Подобрать велосипед мечты</button>
       </form>
@@ -75,28 +86,25 @@
       <ul class="types__list">
         <li class="types__item">
           <picture>
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/doroga-tablet.webp 1x, img/doroga-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/doroga.webp 1x, img/doroga@2x.webp 2x">
-            <source media="(max-width: 1023px)" srcset="img/doroga-tablet.jpg 1x, img/doroga-tablet@2x.jpg 2x">
-            <img src="./img/doroga.jpg" srcset="img/doroga@2x.jpg" width="342" height="503" alt="Дорожный велосипед">
+              <!--width 1х: 503px; 2x: 1006px -->
+            <img src="./img/doroga.jpg" srcset="img/doroga@2x.jpg" width="342" height="503" alt="Дорожный велосипед" data-object-fit="cover">
           </picture>
           <p>Дорожный велосипед</p>
         </li>
         <li class="types__item">
           <picture>
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/gora-tablet.webp 1x, img/gora-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/gora.webp 1x, img/gora@2x.webp 2x">
-            <source media="(max-width: 1023px)" srcset="img/gora-tablet.jpg 1x, img/gora-tablet@2x.jpg 2x">
-            <img src="./img/gora.jpg" srcset="img/gora@2x.jpg" width="342" height="566" alt="Горный велосипед">
+            <!--width 1х: 566px; 2x: 1132px -->
+            <img src="./img/gora.jpg" srcset="img/gora@2x.jpg" width="342" height="566" alt="Горный велосипед" data-object-fit="cover">
           </picture>
           <p>Горный велосипед</p>
         </li>
         <li class="types__item">
           <picture>
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/child-tablet.webp 1x, img/child-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/child.webp 1x, img/child@2x.webp 2x">
-            <source media="(max-width: 1023px)" srcset="img/child-tablet.jpg 1x, img/child-tablet@2x.jpg 2x">
-            <img src="./img/child.jpg" srcset="img/child@2x.jpg" width="342" height="513" alt="Детский велосипед">
+            <!--width 1х: 513px; 2x: 1026px -->
+            <img src="./img/child.jpg" srcset="img/child@2x.jpg" width="342" height="513" alt="Детский велосипед" data-object-fit="cover">
           </picture>
           <p>Детский велосипед</p>
         </li>
@@ -107,18 +115,16 @@
       <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
       <div class="video__wrapper">
         <picture>
-          <source type="image/webp" media="(max-width: 767px)" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
-          <source type="image/webp" media="(max-width: 1023px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
           <source type="image/webp" srcset="./img/video.webp 1x, img/video@2x.webp 2x">
-          <source media="(max-width: 767px)" srcset="img/video-mobile.jpg 1x, img/video-mobile@2x.jpg 2x">
-          <source media="(max-width: 1023px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
-          <img src="./img/video.jpg" srcset="img/video@2x.jpg" width="929" height="522" alt="Видео о велосипедах">
+          <!--width 1х: 929px; 2x: 1858px -->
+          <img src="./img/video.jpg" srcset="img/video@2x.jpg" width="929" height="522" alt="Видео о велосипедах" data-object-fit="cover">
         </picture>
-        <a class="video__btn" href="#">
+        <button class="video__btn" type="button">
+          <span class="visually-hidden">Воспроизвести</span>
           <svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.600098 0.399902L13.6001 9.4999L0.600098 18.5999V0.399902Z" fill="#070707" />
           </svg>
-        </a>
+        </button>
       </div>
     </section>
     <section class="search">
@@ -128,10 +134,11 @@
     </section>
   </main>
   <footer class="footer" id="contacts">
-    <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-    <a href="tel:+749978468446">+7 (499) -784-684-46</a>
+    <a href="mailto:puteshestviemechta@gmail.ru" class="footer__mail">puteshestviemechta@gmail.ru</a>
+    <a href="tel:+749978468446" class="footer__tel">+7 (499) -784-684-46</a>
   </footer>
-  <script src="./js/script.min.js"></script>
+  <script src="./js/vendor.js"></script>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

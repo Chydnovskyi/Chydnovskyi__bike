@@ -6,6 +6,7 @@
   align-items: center;
   background: #f6f7f9;
   padding: 149px 0 147px 0;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
     padding: 50px 0 70px 0;
@@ -21,7 +22,7 @@
   font-size: 30px;
   line-height: 30px;
   letter-spacing: -0.08px;
-  color: #1f1f1f;
+  color: $opacity-black;
   margin: 0;
 }
 
@@ -31,10 +32,10 @@
   padding: 0;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
   @media (max-width: $tablet-width) {
-    flex-wrap: wrap;
     max-width: 590px;
   }
 
@@ -83,9 +84,9 @@
   font-size: 22px;
   line-height: 34px;
   letter-spacing: -0.5px;
-  color: #000000;
+  color: $black;
   margin: 0;
-  padding-top: 17px;
+  padding-top: 15px;
 }
 
 .types__item:first-child::before {
