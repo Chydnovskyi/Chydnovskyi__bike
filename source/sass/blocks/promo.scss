@@ -202,3 +202,11 @@
 .promo__submit:hover {
   background: $basic-hover;
 }
+
+.promo__input--notvalid input {
+  border: 3px solid #ee0909;
+}
+
+.promo__input--valid input {
+  border: 1px solid #0ad9c6;
+}

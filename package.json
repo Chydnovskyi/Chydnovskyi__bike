@@ -4,9 +4,13 @@
   "description": "Bike",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
     "autoprefixer": "10.2.5",
     "browser-sync": "2.26.14",
     "del": "^6.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-htmlacademy": "^4.1.0",
     "gulp": "4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-libsquoosh": "^1.0.10",
@@ -25,7 +29,8 @@
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
+    "eslint": "eslint \"source/js/*.js\" --fix",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp build",
     "start": "gulp"
   },
