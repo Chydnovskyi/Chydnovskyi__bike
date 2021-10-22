@@ -16,8 +16,12 @@ header.classList.remove('header--no-js');
     headerBtn.classList.remove('header__btn--close');
     headerBtn.addEventListener('click', (evt) => {
       evt.preventDefault();
-      header.classList.toggle('header--fullscreen');
-      headerNav.classList.toggle('header__nav--show');
+      if(header){
+        header.classList.toggle('header--fullscreen');
+      }
+      if(headerNav){
+        headerNav.classList.toggle('header__nav--show');
+      }
       headerBtn.classList.toggle('header__btn--close');
     });
   }
@@ -34,12 +38,18 @@ header.classList.remove('header--no-js');
 
   if(form){
     form.addEventListener('click', (evt) => {
-      if (!validatePhone(input)){
-        evt.preventDefault();
-        inputSecond.classList.add('promo__input--notvalid');
-      }else{
-        inputSecond.classList.remove('promo__input--notvalid');
-        inputSecond.classList.add('promo__input--valid');
+      if(input) {
+        if (!validatePhone(input)){
+          evt.preventDefault();
+          if(inputSecond){
+            inputSecond.classList.add('promo__input--notvalid');
+          }
+        }else{
+          if(inputSecond){
+            inputSecond.classList.remove('promo__input--notvalid');
+            inputSecond.classList.add('promo__input--valid');
+          }
+        }
       }
     });
   }
