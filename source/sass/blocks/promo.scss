@@ -23,7 +23,7 @@
 
 .promo__wrapper {
   width: 393px;
-  height: 267px;
+  min-height: 267px;
   margin-right: 160px;
   text-align: left;
   position: relative;
@@ -48,6 +48,7 @@
     background: url("../img/promo-mobile.jpg") no-repeat;
     padding: 94px 5px 0;
     height: 390px;
+    background-size: cover;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background: url("../img/promo-mobile@2x.jpg") no-repeat;
@@ -66,6 +67,11 @@
   @media (max-width: $mobile-width) {
     left: 17px;
   }
+}
+
+.promo__wrapper a {
+  pointer-events: none;
+  cursor: default;
 }
 
 .promo h2 {
@@ -110,17 +116,18 @@
 .promo__form {
   display: flex;
   flex-direction: column;
-  width: 327px;
+  max-width: 327px;
   margin-top: 5px;
 
   @media (max-width: $tablet-width) {
     padding-top: 70px;
     margin: 0 auto;
-    width: 321px;
+    max-width: 321px;
   }
 
   @media (max-width: $mobile-width) {
-    width: 288px;
+    max-width: 767px;
+    margin: 0 16px;
   }
 }
 
@@ -197,6 +204,7 @@
   background: $basic;
   border-radius: 6px;
   border: none;
+  cursor: pointer;
 }
 
 .promo__submit:hover {

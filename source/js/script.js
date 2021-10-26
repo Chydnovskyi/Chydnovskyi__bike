@@ -4,6 +4,7 @@ const header = document.querySelector('.header');
 const input = document.querySelector('#tel');
 const inputSecond = document.querySelector('.promo__input--second');
 const form = document.querySelector('.promo__submit');
+const bodyWrapper = document.querySelector('.body__wrapper');
 
 
 // Меню
@@ -21,6 +22,9 @@ header.classList.remove('header--no-js');
       }
       if(headerNav){
         headerNav.classList.toggle('header__nav--show');
+      }
+      if(bodyWrapper) {
+        bodyWrapper.classList.toggle('body__wrapper--menu');
       }
       headerBtn.classList.toggle('header__btn--close');
     });

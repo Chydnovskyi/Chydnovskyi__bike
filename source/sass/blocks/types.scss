@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   background: #f6f7f9;
-  padding: 149px 0 147px 0;
+  padding: 149px 0 150px 0;
   overflow: hidden;
 
   @media (max-width: $tablet-width) {
@@ -37,12 +37,12 @@
   padding: 0;
   z-index: 1;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
 
   @media (max-width: $tablet-width) {
     max-width: 590px;
     margin-top: 31px;
+    flex-wrap: wrap;
   }
 
   @media (max-width: $mobile-width) {
@@ -53,6 +53,7 @@
 .types__item {
   margin-right: 50px;
   position: relative;
+  max-width: 342px;
 
   @media (max-width: $mobile-width) {
     margin: 0;
@@ -196,6 +197,8 @@
 }
 
 .types__item img {
+  width: 100%;
+
   @media (max-width: $tablet-width) {
     width: 270px;
     height: 300px;

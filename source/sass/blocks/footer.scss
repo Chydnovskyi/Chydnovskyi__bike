@@ -1,25 +1,23 @@
 .footer {
-  padding: 41px 0 96px 25px;
-  margin: 0 auto;
+  padding: 41px 16px 96px 0;
   display: flex;
   justify-content: center;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
-    padding: 21px 0 55px 29px;
+    padding: 21px 8px 55px 0;
   }
 
   @media (max-width: $mobile-width) {
-    flex-wrap: wrap;
-    padding: 30px 0 55px 50px;
+    margin: 0 auto;
+    padding: 30px 0 55px 8px;
     max-width: 227px;
   }
 }
 
 .footer a {
   text-decoration: none;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
   display: flex;
   align-items: center;
   color: rgba(0, 0, 0, 0.5);
@@ -27,7 +25,11 @@
 }
 
 .footer__mail {
-  margin-right: 127px;
+  margin-right: 87px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 90px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-left: 0;
@@ -37,33 +39,17 @@
 
 .footer__tel {
   @media (max-width: $mobile-width) {
-    margin-right: 25px;
-    margin-top: 24px;
+    margin-right: 20px;
+    margin-top: 22px;
   }
 }
 
-.footer__mail::before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 20px;
-  background: url("../img/mail.svg") no-repeat;
-  top: 2px;
-  left: -42px;
-}
-
-.footer__tel::before {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 23px;
-  background: url("../img/phone.svg") no-repeat;
-  top: -3px;
-  left: -35px;
-
-  @media (max-width: $mobile-width) {
-    left: -37px;
-  }
+.footer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  padding-left: 15px;
 }
 
 .footer a:hover {

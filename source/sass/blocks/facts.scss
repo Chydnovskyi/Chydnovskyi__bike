@@ -35,12 +35,13 @@
 
 .facts__list {
   list-style: none;
-  margin: 51px 0 0;
+  margin: 51px auto 0;
   padding: 0;
   display: flex;
+  max-width: 1166px;
+  flex-wrap: wrap;
 
   @media (max-width: $tablet-width) {
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
   }
@@ -52,11 +53,13 @@
 }
 
 .facts__item {
-  width: 263px;
+  flex: 1;
   margin-right: 38px;
 
   @media (max-width: $tablet-width) {
     margin-right: 30px;
+    width: 263px;
+    flex: auto;
   }
 
   @media (max-width: $mobile-width) {

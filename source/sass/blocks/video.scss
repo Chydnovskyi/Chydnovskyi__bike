@@ -2,17 +2,20 @@
   background: #131314;
   position: relative;
   min-height: 706px;
-  padding-top: 124px;
+  padding-top: 120px;
+  padding-bottom: 480px;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
     min-height: 413px;
     padding-top: 70px;
+    padding-bottom: 238px;
   }
 
   @media (max-width: $mobile-width) {
     min-height: 384px;
     padding-top: 85px;
+    padding-bottom: 50%;
   }
 }
 
@@ -23,11 +26,16 @@
   transform: translate(-50%, 0);
 
   @media (max-width: $tablet-width) {
-    bottom: -89px;
+    bottom: -88px;
   }
 
   @media (max-width: $mobile-width) {
-    bottom: -55px;
+    bottom: -52px;
+    max-width: 767px;
+    max-height: 430px;
+    left: 16px;
+    right: 16px;
+    transform: none;
   }
 }
 
@@ -82,6 +90,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -54%);
+  cursor: pointer;
 
   @media (max-width: $tablet-width) {
     width: 90px;
@@ -108,8 +117,8 @@
   }
 
   @media (max-width: $mobile-width) {
-    width: 288px;
-    height: 162px;
+    width: 100%;
+    height: 100%;
   }
 }
 
