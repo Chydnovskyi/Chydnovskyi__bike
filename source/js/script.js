@@ -5,6 +5,7 @@ const input = document.querySelector('#tel');
 const inputSecond = document.querySelector('.promo__input--second');
 const form = document.querySelector('.promo__submit');
 const bodyWrapper = document.querySelector('.body__wrapper');
+const scrollLink = document.querySelectorAll('.scroll');
 
 
 // Меню
@@ -28,6 +29,26 @@ header.classList.remove('header--no-js');
       }
       headerBtn.classList.toggle('header__btn--close');
     });
+  }
+})();
+
+(function () {
+  if(scrollLink){
+    for( let i = 0; i < scrollLink.length; i++){ // проходим циклом по всем элементам объекта
+      scrollLink[i].addEventListener('click', (evt) => {
+        evt.preventDefault();
+        if(header){
+          header.classList.toggle('header--fullscreen');
+        }
+        if(headerNav){
+          headerNav.classList.toggle('header__nav--show');
+        }
+        if(bodyWrapper) {
+          bodyWrapper.classList.toggle('body__wrapper--menu');
+        }
+        headerBtn.classList.toggle('header__btn--close');
+      });
+    }
   }
 })();
 

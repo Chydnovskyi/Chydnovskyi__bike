@@ -33,10 +33,12 @@
 
 .types__list {
   list-style: none;
-  margin: 52px 0 0;
+  margin: 52px 60px 0;
   padding: 0;
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 1221px;
   justify-content: center;
 
   @media (max-width: $tablet-width) {
@@ -54,6 +56,7 @@
   margin-right: 50px;
   position: relative;
   max-width: 342px;
+  flex: 268px;
 
   @media (max-width: $mobile-width) {
     margin: 0;
@@ -86,7 +89,7 @@
   }
 }
 
-.types__item--third {
+.types__item:nth-child(3n + 3) {
   margin-right: 0;
 }
 
@@ -104,6 +107,11 @@
   @media (max-width: $tablet-width) {
     margin-top: 51px;
     margin-left: 50px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-top: 41px;
+    margin-left: 0;
   }
 }
 
@@ -186,8 +194,8 @@
     background-size: contain;
     width: 68px;
     height: 68px;
-    top: -20px;
-    right: -25px;
+    top: -21px;
+    right: 11px;
   }
 
   @media (max-width: $mobile-width) {

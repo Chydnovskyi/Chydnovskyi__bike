@@ -53,7 +53,7 @@
 }
 
 .facts__item {
-  flex: 1;
+  flex: 226px;
   margin-right: 38px;
 
   @media (max-width: $tablet-width) {
@@ -77,7 +77,7 @@
   }
 }
 
-.facts__item--last {
+.facts__item:nth-child(4n+4) {
   margin-right: 0;
 }
 
